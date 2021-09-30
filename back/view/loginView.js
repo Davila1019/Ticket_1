@@ -6,3 +6,10 @@ module.exports = async (app) => {
         res.send( await loginController.login(user));
     });
 };
+
+
+module.exports = async (app) => {
+    app.get('/login', async(req,res) => {
+        res.render('login')
+    })
+}
