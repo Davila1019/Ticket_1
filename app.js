@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
-const sequileze = require('./db/conexion');
-const loginView = require('./view/loginView');
+const sequileze = require('./back/db/conexion');
+const loginView = require('./back/view/loginView');
 const app = express();
 
 app.use(express.json())

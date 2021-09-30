@@ -1,10 +1,10 @@
 {
   "name": "ticket",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,15 @@
     "nodemon": "^2.0.13",
     "sequelize": "^6.6.5",
     "tedious": "^13.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davila1019/Ticket_1.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Davila1019/Ticket_1/issues"
+  },
+  "homepage": "https://github.com/Davila1019/Ticket_1#readme",
+  "description": ""
 }
