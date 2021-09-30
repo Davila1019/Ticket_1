@@ -31,6 +31,11 @@ module.exports = async (app) => {
         else{
             login = await(loginController.login(user));
             if(login != "Usuario no autenticado"){
+                const cookieOptions = {
+                    expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 1000),
+                    httpOnly: true
+                }
+                res.cookie('token', login, cookieOptions)
                 console.log(login)
                 res.redirect('/')
             }
