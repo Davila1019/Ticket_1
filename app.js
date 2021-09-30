@@ -4,8 +4,10 @@ const dotenv = require('dotenv');
 dotenv.config();
 const sequileze = require('./back/db/conexion');
 const loginView = require('./back/view/loginView');
+const homeView = require('./back/view/homeView')
 const app = express();
 
+app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors());
 
@@ -30,3 +32,4 @@ serverStart();
 //Iniciamos vistas de la app
 
 loginView(app);
+homeView(app);
