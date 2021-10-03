@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/home.css">
+    <title>Home</title>
 </head>
 <body>
-    <h1>Bienvenido <%= user.username %></h1>
+    <h1>Presupuestos</h1>
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th >#</th>
+            <th scope="col">ID Presupuesto</th>
+            <th scope="col">Fecha Creacion</th>
+            <th scope="col">Proyecto</th>
+            <th scope="col">Versiones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" onclick="seleccionaTR(this)" id="flexCheckDefault" >
+              </div>
+            </th>
+            <td >1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <!--
+      Botones
+    -->
+    <div id="outer">
+      <div class="inner"><button type="button" class="btn btn-primary" >Nuevo Presupuesto</button></div>
+      <div class="inner"> <button type="button" class="btn btn-warning">Editar</button></div>
+      <div class="inner"><button type="button" class="btn btn-danger">Eliminar</button></div>
+      <div class="inner"><button type="button" class="btn btn-success">Enviar</button></div>
+    </div>
+    
 </body>
+
 </html>
