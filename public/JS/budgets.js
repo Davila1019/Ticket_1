@@ -52,7 +52,7 @@ function easyTabs() {
     }
 }
 function agregarFila(id) {
-    document.getElementById(id).insertRow(1).innerHTML = '<th scope="row" contenteditable="true"></th> <td contenteditable="true" ></td> <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">X</button></td>';
+    document.getElementById(id).insertRow(1).innerHTML = '<th scope="row" contenteditable="true"></th> <td contenteditable="true" > <td contenteditable="true" > <td contenteditable="true" ></td> <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">X</button></td>';
 }  
 function deleteRow(btn) {
     var row = btn.parentNode.parentNode;
