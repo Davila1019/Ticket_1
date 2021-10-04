@@ -35,9 +35,17 @@ module.exports = async (app) => {
                     expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 1000),
                     httpOnly: true
                 }
-                res.cookie('token', login, cookieOptions)
+                res.cookie('jwt', login, cookieOptions)
                 console.log(login)
-                res.redirect('/')
+                res.render('login',{
+                    alert: true,
+                    alertTitle: "Conexión Exitosa",
+                    alertMessage: "Login Correcto",
+                    alertIcon: 'success',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    ruta: ''
+                })
             }
             else{
                 res.render('login',{

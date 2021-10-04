@@ -21,9 +21,7 @@
           </form>
       
           <!-- Remind Passowrd -->
-          <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
-          </div>
+         
         </div>
       </div>
 
@@ -41,9 +39,9 @@
               text: '<%= alertMessage %>',
               icon: '<%= alertIcon %>',
               showConfirmButton: <%= showConfirmButton %>,
-              timer: <%= timer %>
+              timer: <%= timer %>,
             }).then(()=>{
-              window.location = '/login'
+              window.location = '/<%= ruta %>'
             })
           </script>
         <% } %>

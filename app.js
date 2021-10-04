@@ -6,6 +6,7 @@ dotenv.config();
 const sequileze = require('./back/db/conexion');
 const loginView = require('./back/view/loginView');
 const homeView = require('./back/view/homeView')
+const budgetView = require('./back/view/budgetView')
 const app = express();
 
 
@@ -36,3 +37,4 @@ serverStart();
 
 loginView(app);
 homeView(app);
+budgetView(app);
