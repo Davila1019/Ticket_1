@@ -15,45 +15,52 @@
         <h3>Bienvenido <%= user.name %></h3>
       </div>
     </div>
+!--
+      Botones
+    -->
+    <div id="outer">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a class="btn btn-primary btn-lg" href="/nuevoPresupuesto" role="button">Nuevo Presupuesto</a></div>
+    </div>
+
+    <br>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table table-striped table-bordered" id="table2">
         <thead class="thead-dark">
           <tr>
-            <th >#</th>
-            <th scope="col">ID Presupuesto</th>
-            <th scope="col">Fecha Creacion</th>
+            <th scope="col">Id Presupuesto</th>
+            <th scope="col">Fecha creación</th>
             <th scope="col">Proyecto</th>
             <th scope="col">Versiones</th>
+            <th name="bstable-actions"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" onclick="seleccionaTR(this)" id="flexCheckDefault" >
-              </div>
-            </th>
-            <td >1</td>
+            <th scope="row">1</th>
             <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
+            <td name="bstable-actions"><div class="btn-group pull-right">
+              <button id="bEdit" type="button" class="btn btn-sm btn-default">
+                  <span class="fa fa-edit"> </span>
+              </button>
+              <button id="bDel" type="button" class="btn btn-sm btn-default">
+                  <span class="fa fa-trash"> </span>
+              </button>
+              <button id="bAcep" type="button" class="btn btn-sm btn-default">
+                  <span class="fas fa-check-circle"> </span>
+              </button>
+              <button id="bCanc" type="button" class="btn btn-sm btn-default" style="display:none;">
+                  <span class="fa fa-times-circle"> </span>
+              </button>
+          </div></td>
           </tr>
           
         </tbody>
-      </table>
+    </table>
     </div>
 
-    <!--
-      Botones
-    -->
-     <div id="outer">
-      
-      <div class="inner">
-        <a class="btn btn-primary btn-lg" href="/nuevoPresupuesto" role="button">Nuevo Presupuesto</a></div>
-      <div class="inner"> <button type="button" class="btn btn-warning btn-lg">Editar</button></div>
-      <div class="inner"><button type="button" class="btn btn-danger btn-lg">Eliminar</button></div>
-      <div class="inner"><button type="button" class="btn btn-success btn-lg">Enviar</button></div>
-    </div>
     
 </body>
 
