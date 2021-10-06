@@ -33,7 +33,7 @@ function easyTabs() {
                 //add tab selected class
                 this.className="t-tab selected";
                 var idx = this.getAttribute("index"); 
-                if(idx==5)document.getElementById('t-multiple').className='t-container showit';
+                if(idx==9)document.getElementById('t-multiple').className='t-container showit';
                 else 
                     if(this.parentElement.parentElement.getAttribute('id')=='t-principal')document.getElementById('t-multiple').className='t-container';
                 // selected content
@@ -51,7 +51,13 @@ function easyTabs() {
     
     }
 }
-
+function agregarFila(id) {
+    document.getElementById(id).insertRow(1).innerHTML = '<th scope="row" contenteditable="true"></th> <td contenteditable="true" > <td contenteditable="true" > <td contenteditable="true" ></td> <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">X</button></td>';
+}  
+function deleteRow(btn) {
+    var row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
 (function() { 
     easyTabs() ;
 })();

@@ -16,9 +16,14 @@
       <li class="t-tab">Resumen Financiero</li>  
       <li class="t-tab">Flujo de efectivo</li> 
       <li class="t-tab">Estado de resultados</li>  
-      <li class="t-tab">Estado de resultados</li>  
-      <li class="t-tab">Estado de resultados</li>  
-      <li class="t-tab">Estado de resultados</li>  
+
+      <li class="t-tab">Ingresos</li>  
+      <li class="t-tab">Costos Directos</li>  
+      <li class="t-tab">Gastos Administrativos</li>  
+
+      <li class="t-tab">Recursos</li>  
+      <li class="t-tab">Costos</li> 
+      <li class="t-tab">Resumen Costos Recursos</li>  
     </ul>
     <ul class="t-contents">
       <li class="t-content">
@@ -93,84 +98,206 @@
           </tbody>
         </table>
       </li>
-      <li class="t-content">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Titulos</th>
-              <th scope="col">Ventas</th>
-              <th scope="col">Costos</th>
-              <th scope="col">Margen</th>
-              <th scope="col">Saldo final</th>
-              <th scope="col">Sumatoria</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <input type="text" class="inputt"readonly>
-              </th>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt" readonly></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li class="t-content">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Titulos</th>
-              <th scope="col">Ventas</th>
-              <th scope="col">Costos</th>
-              <th scope="col">Margen</th>
-              <th scope="col">Saldo final</th>
-              <th scope="col">Sumatoria</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <input type="text" class="inputt"readonly>
-              </th>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt" readonly></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li class="t-content">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Titulos</th>
-              <th scope="col">Ventas</th>
-              <th scope="col">Costos</th>
-              <th scope="col">Margen</th>
-              <th scope="col">Saldo final</th>
-              <th scope="col">Sumatoria</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <input type="text" class="inputt"readonly>
-              </th>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt"readonly></td>
-              <td><input type="text" class="inputt" readonly></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
+      
+    <!--Parte 2-->
+    <li class="t-content">
+      <table class="table" id="table_ingresos" style="text-align: center;">
+        <thead>
+          <tr>
+            <th scope="col">Concepto</th>
+            <th scope="col">Mes 1</th>
+            <th scope="col">Mes 2</th>
+            <th scope="col">Mes 3</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Utilidades</th>
+            <td>930.1</td>
+            <td>930.1</td>
+            <td>930.1</td>
+          </tr>
+        </tbody>
+        <tfoot style="text-align: end;">
+        <tr style="text-align: end;">
+                <td style="text-align: end;">Total</td>
+                <td> $15305</td>
+                <td> $15305</td>
+                <td> $15305</td>
+              </tr>
+         <th colspan="4" ><button type="button" class="btn btn-primary" onclick="agregarFila('table_ingresos')">Agregar</button></th>
+        </tfoot>
+      </table>
+    </li>
+
+    <li class="t-content">
+      <table class="table" id="table_costos" style="text-align: center;">
+        <thead>
+          <tr>
+            <th scope="col">Concepto</th>
+            <th scope="col">Mes 1</th>
+            <th scope="col">Mes 2</th>
+            <th scope="col">Mes 3</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Nomina</th>
+            <td>930.1</td>
+            <td>930.1</td>
+            <td>930.1</td>
+          </tr>
+        </tbody>
+        <tfoot style="text-align: end;">
+        <tr style="text-align: end;">
+                <td style="text-align: end;">Total</td>
+                <td> $15305</td>
+              </tr>
+         <th colspan="4" ><button type="button" class="btn btn-primary" onclick="agregarFila('table_costos')">Agregar</button></th>
+        </tfoot>
+      </table>
+    </li>
+
+    <li class="t-content">
+      <table class="table" id="table_gastos" style="text-align: center;">
+        <thead>
+          <tr>
+            <th scope="col">Concepto</th>
+            <th scope="col">Mes 1</th>
+            <th scope="col">Mes 2</th>
+            <th scope="col">Mes 3</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Utilidades</th>
+            <td>930.1</td>
+            <td>930.1</td>
+            <td>930.1</td>
+          </tr>
+        </tbody>
+        <tfoot style="text-align: end;">
+        <tr style="text-align: end;">
+                <td style="text-align: end;">Total</td>
+                <td> $15305</td>
+              </tr>
+         <th colspan="4" ><button type="button" class="btn btn-primary" onclick= "agregarFila('table_gastos')" >Agregar</button></th>
+        </tfoot>
+      </table>
+    </li>
+      <!--
+	  Parte 3
+	  -->
+	  <li class="t-content">
+
+     <div style="margin-top:20px;">
+      <button id="table2-new-row-button" class="btn btn-primary">Agregar Recurso</button>
+      <table class="table table-striped table-bordered" id="tableRecursos">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Recursos</th>
+            <th scope="col">Enero</th>
+            <th scope="col">Febrero</th>
+            <th scope="col">Marzo</th>
+			<th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Material 1</th>
+            <td>930.1</td>
+            <td>903.1</td>
+            <td>345.2</td>
+			<td>345.2</td>
+          </tr>
+        </tbody>
+		 <tfoot>
+    <tr>
+      <th>Total</th>
+      <th>$7,750.00</th>
+	    <th>$7,750.00</th>
+	    <th>$7,750.00</th>
+	    <th>$7,750.00</th>
+      </tr>
+
+    </tfoot>
+    </table>
+    </div>
+</li>
+	
+	<li class="t-content">
+	  <div class="table-responsive">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Recursos</th>
+            <th scope="col">Enero</th>
+            <th scope="col">Febrero</th>
+            <th scope="col">Marzo</th>
+			<th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Material 1</th>
+                  <td>930.1</td>
+                  <td>903.1</td>
+                  <td>345.2</td>
+            <td>345.2</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Total</th>
+                  <th>$7,750.00</th>
+                  <th>$7,750.00</th>
+                  <th>$7,750.00</th>
+                  <th>$7,750.00</th>
+                  </tr>
+            
+                </tfoot>
+            </table>
+          </div>
+	</li>
+	
+	<li class="t-content">
+	  <div class="table-responsive">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Recursos</th>
+            <th scope="col">Enero</th>
+            <th scope="col">Febrero</th>
+            <th scope="col">Marzo</th>
+			<th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Material 1</th>
+                  <td>310.1</td>
+                  <td>315.1</td>
+                  <td>467.2</td>
+            <td>876543.2</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Total</th>
+                  <th>$7,750.00</th>
+                  <th>$7,750.00</th>
+                  <th>$7,750.00</th>
+                  <th>$7,750.00</th>
+                  </tr>
+            
+                </tfoot>
+            </table>
+          </div>
+	</li>
+      
     </ul>
   </div>
   
