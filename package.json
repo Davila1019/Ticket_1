@@ -19,7 +19,7 @@
     "sequelize": "^6.6.5",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.1.7",
-    "tedious": "^13.0.4"
+    "tedious": "^13.1.0"
   },
   "repository": {
     "type": "git",

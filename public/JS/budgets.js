@@ -61,3 +61,49 @@ function deleteRow(btn) {
 (function() { 
     easyTabs() ;
 })();
+
+
+function add() {
+   
+    let table = document.getElementById("table-flujo");
+    var row = document.createElement('tr');
+    let rows = document.querySelectorAll('#table-flujo > tr');
+    let rowCount;
+    if(rows.length == 0){
+      rowCount = 0;
+    }
+    else{
+      rowCount = rows.length;
+    }
+    row.setAttribute('id',"flujo"+rowCount)
+    let celdas = `
+              <th scope="row">
+                <input type="text" readonly>
+              </th>
+              <td><input type="text" readonly></td>
+              <td><input type="text" readonly></td>
+              <td><input type="text" readonly></td>
+              <td><input type="text" readonly></td>
+    `;
+    row.innerHTML += celdas
+    table.appendChild(row)
+    document.getElementById('btn-delete').disabled = false;
+
+
+  }  
+
+  function deleteRows(){
+    // let rowCount;
+    
+    let rows = document.querySelectorAll('#table-flujo > tr');
+    for (var i = 0; i < rows.length; i++) {
+    var item = rows[i];  // No es necesario llamar a myNodeList.item(i) en JavaScript
+    }
+    var e = item.getAttribute("id")
+    
+    var nodo = document.getElementById(e);
+    if (nodo.parentNode) {
+      nodo.parentNode.removeChild(nodo);
+    }
+
+  }
