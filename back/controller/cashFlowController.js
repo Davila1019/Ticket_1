@@ -16,12 +16,12 @@ module.exports.add = async function (table){
 
         {   name: table.name,
             cashFlow: table.cashFlow,
-            results: table.results,
-            income: table.results,
-            directCosts: table.results,
-            expenses: table.results,
-            costs    : table.results,
-            summary: table.results,
+            results: table.cashFlow,
+            income: table.cashFlow,
+            directCosts: table.cashFlow,
+            expenses: table.cashFlow,
+            costs    : table.cashFlow,
+            summary: table.cashFlow,
         }
     )
     let data = await budgetModel.find({name:table.name}).exec();
