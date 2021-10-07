@@ -1,9 +1,24 @@
-#outer
-{
-    width:100%;
-    text-align: center;
-}
-.inner
-{
-    display: inline-block;
-}
+
+
+.modals-contenido{
+    background-color:aqua;
+    width:80%;
+    padding: 10px 20px;
+    margin: 10% auto;
+    position: relative;
+  }
+  .modals{
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+  }
+  #miModal:target{
+    opacity:1;
+    pointer-events:auto;
+  }

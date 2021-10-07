@@ -30,13 +30,14 @@ module.exports = async (app) => {
         }
         else{
             login = await(loginController.login(user));
+            console.log(login)
             if(login != "Usuario no autenticado"){
                 const cookieOptions = {
                     expires: new Date(Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 1000),
                     httpOnly: true
                 }
                 res.cookie('jwt', login, cookieOptions)
-                console.log(login)
+                
                 res.render('login',{
                     alert: true,
                     alertTitle: "Conexión Exitosa",

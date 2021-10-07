@@ -22,15 +22,12 @@
     <div class="container">
      <h1 align="center">Presupuestos</h1>
       <div>
-        <h3>Bienvenido <%= user.name %></h3>
       </div>
     </div>
-!--
-      Botones
-    -->
+
     <div id="outer">
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a class="btn btn-primary btn-lg" href="/budget" role="button">Nuevo Presupuesto</a></div>
+        <a class="btn btn-primary btn-lg" href="#miModal" role="button">Nuevo Presupuesto</a></div>
     </div>
 
     <br>
@@ -67,7 +64,16 @@
         </tbody>
     </table>
     </div>
-    
+    <div id="miModal" class="modals">
+      <div class="modals-contenido">
+        <a href="#">X</a>
+        <h2>Nuevo Presupuesto</h2>
+        <form action="/budget" method="POST">
+          <input type="text" name="budget">
+          <button type="submit">Crear</button>
+        </form>
+      </div>  
+    </div>
 </body>
 
 </html>

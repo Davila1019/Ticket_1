@@ -9,8 +9,42 @@
     <title>Document</title>
 </head>
 <body>
-    
-<div class="container mt-5">
+  <div>
+    <div>
+      <input type="text" readonly name="name" value="
+      Proyecto: <%= token.name %>
+      ">
+    </div>
+  </div>
+    <div class="container mt-5 pt-5">
+      <%- include('./partials/headBudget'); %>
+      
+    </div>
+  <div class="container mt-5">
+    <table class="table">
+      <thead>
+        <tr>
+          
+          <th scope="col">></th>
+          <th scope="col">Costos</th>
+          <th scope="col">Margen</th>
+          <th scope="col">%</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <th scope="row">
+            <input type="text" readonly>
+          </th>
+          <td><input type="text" readonly></td>
+          <td><input type="text" readonly></td>
+          <td><input type="text" readonly></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<!-- <div class="container mt-5">
   <div class="t-container">
     <ul class="t-tabs">  
       <li class="t-tab">Resumen Financiero</li>  
@@ -95,7 +129,7 @@
         </table>
       </li>
       
-    <!--Parte 2-->
+  
     <li class="t-content">
       <table class="table" id="table_ingresos" style="text-align: center;">
         <thead>
@@ -184,9 +218,7 @@
         </tfoot>
       </table>
     </li>
-      <!--
-	  Parte 3
-	  -->
+    
 	  <li class="t-content">
 
      <div style="margin-top:20px;">
@@ -297,7 +329,8 @@
     </ul>
   </div>
   
-</div>
+</div> -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script src="JS/budgets.js"></script>
 
