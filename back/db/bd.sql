@@ -74,7 +74,8 @@ CREATE TABLE ingresos
   idIngreso INT NOT NULL IDENTITY (1,1),
   id_Presupuesto INT NOT NULL,
   id_Mes INT NOT NULL,
-  concepto FLOAT NOT NULL,
+  concepto VARCHAR(40) NOT NULL,
+  monto FLOAT NOT NULL,
   PRIMARY KEY (idIngreso),
     FOREIGN KEY(id_Presupuesto) REFERENCES presupuestos(idPresupuesto),
 	FOREIGN KEY(id_Mes) REFERENCES mes (idMes)
@@ -85,7 +86,8 @@ CREATE TABLE costosDirectos
   idCostosD INT NOT NULL IDENTITY (1,1),
   id_Presupuesto INT NOT NULL,
   id_Mes INT NOT NULL,
-  concepto FLOAT NOT NULL,
+  concepto VARCHAR(40) NOT NULL,
+  monto FLOAT NOT NULL,
   PRIMARY KEY (idCostosD),
     FOREIGN KEY(id_Presupuesto) REFERENCES presupuestos(idPresupuesto),
 	FOREIGN KEY(id_Mes) REFERENCES mes (idMes)
@@ -96,7 +98,8 @@ CREATE TABLE gastosAdmin
   idgastosAdmin INT NOT NULL IDENTITY (1,1),
   id_Presupuesto INT NOT NULL,
   id_Mes INT NOT NULL,
-  concepto FLOAT NOT NULL,
+  concepto VARCHAR(40) NOT NULL,
+  monto FLOAT NOT NULL,
   PRIMARY KEY (idgastosAdmin),
     FOREIGN KEY(id_Presupuesto) REFERENCES presupuestos(idPresupuesto),
 	FOREIGN KEY(id_Mes) REFERENCES mes (idMes)
