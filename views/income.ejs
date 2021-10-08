@@ -9,37 +9,52 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container mt-5 pt-5">
-        <%- include('./partials/headBudget'); %>
-      </div>
-    <div class="container mt-5">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Concepto</th>
-                <th scope="col">Enero</th>
-                <th scope="col">Febrero</th>
-                <th scope="col">Marzo</th>
-                <th scope="col">Abril</th>
-                <th scope="col">Mayo</th>
-                <th scope="col">Junio</th>
-                <th scope="col">Julio</th>
-                <th scope="col">Agosto</th>
-                <th scope="col">Septiembre</th>
-                <th scope="col">Octubre</th>
-                <th scope="col">Noviembre</th>
-                <th scope="col">Diciembre</th>
-              </tr>
-            </thead>
-            <tbody id="table-flujo">
-            </tbody>
-            <th>Total</th>
-            <td><label for=""></label></td>
-          </table>
-          <div>
-            <button type="button" class="btn btn-primary" id="btn-row" onclick="add()">Agregar</button>
-            <button type="button" class="btn btn-primary" id="btn-delete" onclick="deleteRows()" disabled>Eliminar</button>
-          </div>
+  <form action="/income" method="POST">
+    <div>
+      <input type="text" readonly name="name" value="
+      Proyecto: <%= token.name %>
+      ">
     </div>
+      <div class="container mt-5 pt-5">
+          <%- include('./partials/headBudget'); %>
+        </div>
+      <div class="container mt-5">
+        
+  
+          <table class="table" id="tab-income">
+              <thead>
+                <tr>
+                  <th scope="col">Concepto</th>
+                  <th scope="col">Monto</th>
+                  <th scope="col">%</th>
+                </tr>
+              </thead>
+              <tbody id="table-income">
+                <tr>
+                  <% for(var i=0; i< data.length; i++) { %>
+                    <% if(data[i].income[0] != undefined) { %>
+                      <th scope="col"> <input type="text" readonly></th>
+                      <% } %>
+                    <% } %>
+                </tr>
+              </tbody>
+             
+              <!-- <td><input type="text" disabled></td> -->
+            </table>
+            <div>
+              <button type="submit" class="btn btn-success" id="btn-row">Agregar</button>
+              <button type="button" class="btn btn-primary" id="btnadd" onclick="agregarFila('tab-income')">Agregar</button>
+            </div>
+      </div>
+  </form>
 </body>
-</html>
+<script>
+function agregarFila(id) {
+  document.getElementById(id).insertRow(1).innerHTML = '<th scope="row" contenteditable="true"></th> <td contenteditable="true" > <td contenteditable="true" > <td contenteditable="true" ></td> <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">X</button></td>';
+}  
+function deleteRow(btn) {
+  alert("Seguro que quiere eliminar");
+  var row = btn.parentNode.parentNode;
+  row.parentNode.removeChild(row);
+}
+</script>
