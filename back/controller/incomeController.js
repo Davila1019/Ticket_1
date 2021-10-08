@@ -6,14 +6,14 @@ let datag;
 module.exports.get = async function(name){
     let data = await budgetModel.find({name:name}).exec();
     datag = data;
-    console.log(data)
+    console.log(data.ida)
     return data
 }
 
 
 module.exports.add = async function (table){
     
-    await budgetModel..find(name:name , {
+    await budgetModel.findByIdAndUpdate(, {
          $push: { 'incomin': table.incomin } 
         
         })
