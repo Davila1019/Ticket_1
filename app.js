@@ -8,10 +8,15 @@ const sequileze = require('./back/db/conexion');
 const loginView = require('./back/view/loginView');
 const homeView = require('./back/view/homeView')
 const budgetView = require('./back/view/budgetView')
+const incomeView = require('./back/view/incomeView')
+const direcCostView = require('./back/view/direcCosts')
 const cashFlowView = require('./back/view/cashFlowView')
 const resultsView = require('./back/view/resultsView')
-const incomes = require('./back/view/incomes')
+const expenseView = require('./back/view/expensesView')
 const register = require('./back/view/registerView')
+const resourceView = require('./back/view/resourceView');
+const costsView = require('./back/view/costsView');
+const summaryView = require('./back/view/summaryView');
 const app = express();
 
 
@@ -65,4 +70,10 @@ budgetView(app);
 cashFlowView(app);
 register(app);
 resultsView(app);
+incomeView(app);
+direcCostView(app);
+expenseView(app)
+resourceView(app);
+costsView(app);
+summaryView(app);
 // incomes(app);

@@ -37,7 +37,7 @@ module.exports = async (app) => {
                     httpOnly: true
                 }
                 res.cookie('jwt', login, cookieOptions)
-                
+                res.cookie('budget', login, cookieOptions)
                 res.render('login',{
                     alert: true,
                     alertTitle: "Conexión Exitosa",
