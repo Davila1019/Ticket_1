@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/budgets.css">
+    <title>Recursos</title>
+</head>
+<body>
+    <div class="container mt-5 pt-5">
+        <%- include('./partials/headBudget'); %>
+      </div>
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Recurso</th>
+                <% for(var i=0; i< data.length; i++) { %>
+
+                  <% if(data[i].cashFlow[0] != undefined) { %>
+                    <th scope="col"><%= data[i].cashFlow[0] %></th>
+                    <% } %>
+
+                  <% } %>
+                
+              </tr>
+            </thead>
+            <tbody id="table-flujo">
+
+            </tbody>
+             <tfoot>
+            <tr>
+            <th>Total</th>
+
+            </tr>
+            </tfoot>
+          </table>
+          <div>
+            <button type="button" class="btn btn-primary" id="btn-row" onclick="add()">Agregar</button>
+            <button type="button" class="btn btn-primary" id="btn-delete" onclick="deleteRows()" disabled>Eliminar</button>
+          </div>
+    </div>
+</body>
+<script src="JS/budgets.js"></script>
+</html>
