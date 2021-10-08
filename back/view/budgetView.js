@@ -23,7 +23,7 @@ module.exports = async (app) => {
             console.log(data)
             res.cookie('budget', data, cookieOptions)
             
-            res.render('budgets')
+            res.render('budgets',{token})
         }
         
     })

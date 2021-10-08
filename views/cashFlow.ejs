@@ -37,24 +37,24 @@
               <tbody id="table-flujo">
                 <tr>
                   <th scope="row">
-                    <label for="">Egresos</label>
-                  </th>
-                  <% for(var i=0; i< data.length; i++) { %>
-  
-                    <% if(data[i].cashFlow[0] != undefined) { %>
-                      <th scope="row"> <input type="text" readonly></th>
-                      <% } %>
-  
-                    <% } %>
-                </tr>
-                <tr>
-                  <th scope="row">
                     <label for="">Ingresos</label>
                   </th>
                   <% for(var i=0; i< data.length; i++) { %>
   
                     <% if(data[i].cashFlow[0] != undefined) { %>
                       <th scope="row"> <input type="text" readonly value="<%= data[i].cashFlow[1] %>"></th>
+                      <% } %>
+  
+                    <% } %>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="">Egresos</label>
+                  </th>
+                  <% for(var i=0; i< data.length; i++) { %>
+  
+                    <% if(data[i].cashFlow[0] != undefined) { %>
+                      <th scope="row"> <input type="text" readonly></th>
                       <% } %>
   
                     <% } %>
