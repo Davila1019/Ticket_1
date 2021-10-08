@@ -15,13 +15,13 @@ module.exports.add = async function (table){
     await budgetModel.insertMany(
 
         {   name: table.name,
-            cashFlow: table.cashFlow,
-            results: table.cashFlow,
-            income: table.cashFlow,
-            directCosts: table.cashFlow,
-            expenses: table.cashFlow,
-            costs    : table.cashFlow,
-            summary: table.cashFlow,
+            cashFlow: [table.month, table.amount],
+            results: table.month,
+            income: table.month,
+            directCosts: table.month,
+            expenses: table.month,
+            costs    : table.month,
+            summary: table.month,
         }
     )
     let data = await budgetModel.find({name:table.name}).exec();

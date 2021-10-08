@@ -22,13 +22,14 @@ module.exports = async (app) => {
     })
 
     app.post('/cashFlow', async(req,res) => {
-            
+        const decodificada = await promisify(jwt.verify)(req.cookies.budget, process.env.KEY)
+        const token = decodificada;
             let table = req.body;
             console.log(table)
             let data= await cashFlowController.add(table)
             console.log(data)
             if(data){
-            res.json("Columna")
+                res.render('cashFlow',{token,data})
             }
         })  
 }

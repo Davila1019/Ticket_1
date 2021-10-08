@@ -13,7 +13,7 @@ module.exports.get = async function(name){
 
 module.exports.add = async function (table){
     
-    await budgetModel.findByIdAndUpdate(, {
+    await budgetModel.findByIdAndUpdate({
          $push: { 'incomin': table.incomin } 
         
         })
