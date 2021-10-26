@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const {promisify} = require('util');
 module.exports = async (app) => {
    
-    app.get('/directCosts', async(req,res) => {
+    app.get('/directCosts',isAuthenticated.isAuthenticated, async(req,res) => {
         const decodificada = await promisify(jwt.verify)(req.cookies.budget, process.env.KEY)
         const token = decodificada;
         let data = await directCostController.get(token.name)
@@ -20,7 +20,7 @@ module.exports = async (app) => {
 
     })
 
-    app.post('/directCosts', async(req,res) => {
+    app.post('/directCosts',isAuthenticated.isAuthenticated, async(req,res) => {
             
             let table = req.body;
             console.log(table)

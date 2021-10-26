@@ -4,13 +4,13 @@ const jwt = require('jsonwebtoken');
 const {promisify} = require('util');
 module.exports = async (app) => {
    
-    app.get('/budget', async(req,res) => {
+    app.get('/budget',isAuthenticated.isAuthenticated, async(req,res) => {
         const decodificada = await promisify(jwt.verify)(req.cookies.budget, process.env.KEY)
         const token = decodificada;
         res.render('budgets',{token})
     })
 
-    app.post('/budget',async(req,res) => {
+    app.post('/budget',isAuthenticated.isAuthenticated,async(req,res) => {
 
         let budget = req.body;
         

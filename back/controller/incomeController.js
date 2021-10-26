@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 let datag;
 
 module.exports.get = async function(name){
-    let data = await budgetModel.find({name:name}).exec();
+    let data = await Model.find({name:name}).exec();
     datag = data;
     console.log(data.ida)
     return data
@@ -13,7 +13,11 @@ module.exports.get = async function(name){
 
 module.exports.add = async function (table){
     
+<<<<<<< HEAD
     await budgetModel.findByIdAndUpdate({
+=======
+    await budgetModel.findByIdAndUpdate(datag.id, {
+>>>>>>> bf123d0 (Iteraciòn (Agregar el middleware de autenticacion a toda la aplicaciòn))
          $push: { 'incomin': table.incomin } 
         
         })

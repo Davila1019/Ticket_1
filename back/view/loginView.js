@@ -45,7 +45,7 @@ module.exports = async (app) => {
                     alertIcon: 'success',
                     showConfirmButton: false,
                     timer: 1500,
-                    ruta: ''
+                    ruta: '/budget'
                 })
             }
             else{

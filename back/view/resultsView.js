@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const {promisify} = require('util');
 module.exports = async (app) => {
 
-    app.get('/results', async(req,res) => {
+    app.get('/results',isAuthenticated.isAuthenticated, async(req,res) => {
         const decodificada = await promisify(jwt.verify)(req.cookies.budget, process.env.KEY)
         const token = decodificada;
         let data = await resultsController.get(token.name)

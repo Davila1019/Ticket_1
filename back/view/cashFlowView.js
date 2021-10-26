@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const {promisify} = require('util');
 module.exports = async (app) => {
 
-    app.get('/cashFlow', async(req,res) => {
+    app.get('/cashFlow',isAuthenticated.isAuthenticated, async(req,res) => {
         const decodificada = await promisify(jwt.verify)(req.cookies.budget, process.env.KEY)
         const token = decodificada;
         let data = await cashFlowController.get(token.name)
@@ -21,7 +21,7 @@ module.exports = async (app) => {
 
     })
 
-    app.post('/cashFlow', async(req,res) => {
+    app.post('/cashFlow',isAuthenticated.isAuthenticated, async(req,res) => {
         const decodificada = await promisify(jwt.verify)(req.cookies.budget, process.env.KEY)
         const token = decodificada;
             let table = req.body;
